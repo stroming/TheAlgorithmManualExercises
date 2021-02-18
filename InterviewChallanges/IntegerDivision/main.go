@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	fmt.Println(IntegerDivision(10, 2))
+	fmt.Println(IntegerDivision(11, 2))
 	fmt.Println(IntegerDivision(100, 2))
 	fmt.Println(IntegerDivision(10, 10))
 	fmt.Println(IntegerDivision(192, 16))
@@ -16,15 +16,15 @@ func main() {
 	fmt.Println(IntegerDivision(216, 16))
 }
 
-func IntegerDivision(x int, y int) (int, int) {
+func IntegerDivision(x int, y int) (int, string, int) {
 	// X divided by Y = result
-	result := 0
+	fmt.Println("Integer ", x, " divided by Integer ", y, " Is equal to")
 
-	for x > 0 {
+	result := 0
+	for x >= y {
 		x = x - y
 		result++
 	}
 
-	fmt.Println("Integer 1 = result, Integer 2 = what's left")
-	return result, -x
+	return result, " with remainder ", x
 }
